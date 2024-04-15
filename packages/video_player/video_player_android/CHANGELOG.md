@@ -1,3 +1,7 @@
+## 2.5.0
+
+* Migrates ExoPlayer to Media3-ExoPlayer 1.3.1.
+
 ## 2.4.14
 
 * Calls `onDestroy` instead of `initialize` in onDetachedFromEngine.
