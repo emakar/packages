@@ -1,3 +1,8 @@
+## version: 0.3.0+9
+
+* Makes compatible with guava 32.1.+ and Gradle 6.x
+* Demotes api dependencies to implementation - androidx.test.ext:truth:1.5.0, com.google.truth:truth:1.1.3
+
 ## 0.3.0+8
 
 * Updates minSdkVersion to 19.
