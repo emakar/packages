@@ -47,6 +47,17 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    // Workaround for Gradle 6.x inability to handle org.gradle.jvm.environment attribute
+    // see "Selecting the appropriate flavor"
+    // https://github.com/google/guava/releases/tag/v32.1.0
+    dependencies.constraints {
+        implementation("com.google.guava:guava") {
+            attributes {
+                attribute(Attribute.of("org.gradle.jvm.environment", String), "android")
+            }
+        }
+    }
+
     dependencies {
         def exoplayer_version = "1.3.1"
         implementation "androidx.media3:media3-exoplayer:${exoplayer_version}"
